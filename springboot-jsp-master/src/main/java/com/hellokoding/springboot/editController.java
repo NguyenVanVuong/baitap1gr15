@@ -1,0 +1,45 @@
+package com.hellokoding.springboot;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.conection.query;
+
+@Controller
+public class editController {
+	   @RequestMapping("/edit")
+	    public String editPage(Model model, @RequestParam(value="name", required=false, defaultValue="World") String data) throws Exception {
+
+           try{
+	    	query get = new query();
+	    	data = get.getData();
+           }
+           catch(Exception e)
+           {
+        	   
+           }
+	      
+	        model.addAttribute("name",data);
+	   
+	    	
+	        return "edit";
+	    }
+	   @RequestMapping(value ="edit/upload",method = RequestMethod.GET)
+	    @ResponseBody 
+	    public String uploadck(Model model,@RequestParam("noidung") String noidung) {
+	    	try{
+	             
+	        	query get = new query();
+		    	get.setData(noidung);
+		    	return "Up du lieu hoan tat";
+	    	}
+	    	catch (Exception e) {
+	    		return "That bai!";
+			}
+	   }
+
+}
