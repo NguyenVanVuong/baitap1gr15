@@ -1,11 +1,12 @@
 package com.conection;
 
 public class dbconection {
-	public String name="postgres";
-	public String pass="vuong120992";
-	String url = String.format(
+	public String name="root";
+	public String pass="dtdmnhom3";
+	
+	 String sql = String.format(
 		        "jdbc:mysql://google/%s?cloudSqlInstance=%s&"
-		            + "socketFactory=com.google.cloud.sql.mysql.SocketFactory", "cloudcptgr15","vuong-app2:asia-northeast1:postgres");
+		            + "socketFactory=com.google.cloud.sql.mysql.SocketFactory", "dtdmnhom3","baitapnhom3-sql:asia-northeast1:dtdmnhom3");
 	public String getURL()
 	{
 		return url;
