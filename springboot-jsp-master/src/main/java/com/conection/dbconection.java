@@ -3,7 +3,7 @@ package com.conection;
 public class dbconection {
 	public String name="postgres";
 	public String pass="vuong120992";
-	String sql = String.format(
+	String url = String.format(
 		        "jdbc:mysql://google/%s?cloudSqlInstance=%s&"
 		            + "socketFactory=com.google.cloud.sql.mysql.SocketFactory", "btdtdm15","baitap1-myap:asia-northeast1:postgres");
 	public String getURL()
