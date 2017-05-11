@@ -25,7 +25,7 @@ public class query {
 		{
 			con=DriverManager.getConnection(s.getURL(),s.getName(),s.getPass());
 			stm=con.createStatement();
-			rs=stm.executeQuery("select * from edit_tb");
+			rs=stm.executeQuery("select * from tbl_test");
 			
 		if(rs.next())
 			ss=rs.getString("noidung");
@@ -63,7 +63,7 @@ public class query {
 			
 			con=DriverManager.getConnection(s.getURL(),s.getName(),s.getPass());
 			stm=con.createStatement();
-			String sql="UPDATE `edit_tb` SET `noidung`= '"+noidung+"'";
+			String sql="UPDATE `tbl_test` SET `noidung`= '"+noidung+"'";
 			PreparedStatement pst = (PreparedStatement) con.prepareStatement(sql);
 			return pst.executeUpdate() > 0;						
 					
