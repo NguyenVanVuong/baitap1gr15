@@ -66,11 +66,11 @@
     </dependencies>
     <build>
         <plugins>
-         <plugin>
+           <plugin>
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
         <version>1.2.1</version>
-      </plugin>
+             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
