@@ -6,7 +6,7 @@ public class dbconection {
 	
 	 String url = String.format(
 		        "jdbc:mysql://google/%s?cloudSqlInstance=%s&"
-		            + "socketFactory=com.google.cloud.sql.mysql.SocketFactory", "edit","green-calling-160407:asia-northeast1:test1");
+		            + "socketFactory=com.google.cloud.sql.mysql.SocketFactory", "mydata","groupg15final:asia-northeast1:mysql;
 	public String getURL()
 	{
 		return url;
