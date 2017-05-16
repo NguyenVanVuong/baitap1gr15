@@ -63,7 +63,7 @@ public class query {
 			
 			con=DriverManager.getConnection(s.getURL(),s.getName(),s.getPass());
 			stm=con.createStatement();
-			String sql="UPDATE `edit_tbl` SET `mess`= '"+noidung+"'";
+			String sql="UPDATE `message_tbl` SET `mess`= '"+noidung+"'";
 			PreparedStatement pst = (PreparedStatement) con.prepareStatement(sql);
 			return pst.executeUpdate() > 0;						
 					
