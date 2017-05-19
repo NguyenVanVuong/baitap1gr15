@@ -25,10 +25,10 @@ public class query {
 		{
 			con=DriverManager.getConnection(s.getURL(),s.getName(),s.getPass());
 			stm=con.createStatement();
-			rs=stm.executeQuery("select * from message_tbl");
+			rs=stm.executeQuery("select * from edit_tbl");
 			
 		if(rs.next())
-			ss=rs.getString("mess");
+			ss=rs.getString("noidung");
 		}catch(SQLException e){
 			e.printStackTrace();
 		}	
@@ -63,7 +63,7 @@ public class query {
 			
 			con=DriverManager.getConnection(s.getURL(),s.getName(),s.getPass());
 			stm=con.createStatement();
-			String sql="UPDATE `message_tbl` SET `mess`= '"+noidung+"'";
+			String sql="UPDATE `edit_tbl` SET `noidung`= '"+noidung+"'";
 			PreparedStatement pst = (PreparedStatement) con.prepareStatement(sql);
 			return pst.executeUpdate() > 0;						
 					
